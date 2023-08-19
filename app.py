@@ -20,8 +20,8 @@ from flask import request
 @app.route('/input')
 @app.route('/input')
 def input_req():
-    data = request.args.get('x')
-    data1 = request.args.get('y')
+    data = int(request.args.get('x'))
+    data1 = int(request.args.get('y'))
     data3 = data1 + data
     return 'This is the input: {}'.format(data3)
 
